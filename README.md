@@ -10,7 +10,7 @@ The code is separated into three files:
 
 2. ```utils.py```
    - Contains utility functions for generating eigenvalues (`random`, `arithmetic`, `geometric`) and computing Newton-Girard coefficients (`sum_with_error`, `cal_coefficient`, `cal_power_trace`).
-   - These functions focus on the mathematical logic for generating eigenvalue vectors and calculating `Trace(rho^k)`.
+   - These functions focus on the mathematical logic for generating eigenvalue vectors and calculating $\mathrm{Tr}(\rho^k)$.
 
 3. ```main.py```  
    - Reads the configuration from `config.py` and runs the experiment.
@@ -55,8 +55,8 @@ This file stores the numerical simulation results using the following columns:
  2. `rank`  
  3. `K`  
  4. `gap`  
- 5. `v1_est` (estimated `Trace(rho^(r+K))`)  
- 6. `v2_exact` (exact `Trace(rho^(r+K))`)  
+ 5. `v1_est` (estimated $\mathrm{Tr}(\rho^K)$)  
+ 6. `v2_exact` (exact $\mathrm{Tr}(\rho^K)$)  
  7. `abs_error` (`|v1 - v2|`)  
 
 ### Plots  
