@@ -55,8 +55,8 @@ This file stores the numerical simulation results using the following columns:
  2. `rank`  
  3. `K`  
  4. `gap`  
- 5. `v1_est` (estimated $\mathrm{Tr}(\rho^K)$)  
- 6. `v2_exact` (exact $\mathrm{Tr}(\rho^K)$)  
+ 5. `v1_est` (estimated $\mathrm{Tr}(\rho^K)$ values)  
+ 6. `v2_exact` (exact $\mathrm{Tr}(\rho^K)$ values)  
  7. `abs_error` (`|v1 - v2|`)  
 
 ### Plots  
