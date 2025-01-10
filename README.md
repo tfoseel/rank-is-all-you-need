@@ -89,7 +89,8 @@ Then, in `main.py` (or wherever distribution is chosen), add:
 ```python
 if distribution == "mynewdist":
     eigs = gen_mynewdist(your_param, r)
-else: ...
+else:
+    ...
 ```
 
 You can store extra parameters in `config.py` (similar to `gaps` or `iteration`). The `sum_with_error`, `cal_coefficient`, and `cal_power_trace` functions should remain unchanged, as they only depend on the generated eigenvalues.
