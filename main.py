@@ -5,11 +5,9 @@
 Main execution script for the Newton-Girard trace estimation experiment.
 
 Key points:
-- We do NOT save config.json.
 - We handle 'gaps' as a list. For random distribution, we ignore them ([-1]).
 - For arithmetic/geometric, we do a triple nested loop over ranks, k_values, and gaps.
 - The CSV's first column is a running integer index, starting from 0, incremented each row.
-- 'index_or_combination' is removed; we just store index, rank, K, gap, v1, v2, abs_err.
 
 If gen_arithmetic fails, it should print an error like:
   [gen_arithmetic] Error: Cannot satisfy max_min_gap=... for rank=...
