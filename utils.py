@@ -101,6 +101,29 @@ def gen_geometric(max_min_ratio, size):
     return eigs
 
 
+def gen_almost_one(size):
+    """
+    Generate an eigenvalue distribution of length `size` where:
+      - One eigenvalue is chosen in the range [0.8, 0.999].
+      - The rest (size-1) eigenvalues share 1 - that large value randomly.
+    Returns:
+      A NumPy array of shape (size,) that sums to 1.
+    """
+    if size < 2:
+        raise ValueError("size must be at least 2 for gen_almost_one")
+    big_val = np.random.uniform(0.999, 0.999999)
+    remain = 1.0 - big_val
+    other = np.random.rand(size - 1)
+    other_sum = np.sum(other)
+    if other_sum > 0:
+        other = other / other_sum * remain
+    else:
+        other = np.zeros(size - 1)
+    eigs = np.concatenate(([big_val], other))
+    eigs = np.sort(eigs)[::-1]
+    return eigs
+
+
 def gen_random(size):
     """
     Generate a random eigenvalue vector (size = 'size'), summing to 1, all >= 0.
