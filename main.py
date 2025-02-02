@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 
 import config
 from utils import (
-    gen_arithmetic, gen_geometric, gen_random,
+    gen_arithmetic, gen_geometric, gen_random, gen_almost_one,
     sum_with_error, cal_coefficient, cal_power_trace
 )
 

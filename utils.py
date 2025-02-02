@@ -104,7 +104,7 @@ def gen_geometric(max_min_ratio, size):
 def gen_almost_one(size):
     """
     Generate an eigenvalue distribution of length `size` where:
-      - One eigenvalue is chosen in the range [0.8, 0.999].
+      - One eigenvalue is chosen in the range [0.999, 0.999999].
       - The rest (size-1) eigenvalues share 1 - that large value randomly.
     Returns:
       A NumPy array of shape (size,) that sums to 1.
